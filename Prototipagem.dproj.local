@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/03/21 20:44:11.000.268,=rtl.dcp</Transaction>
+    <Transaction>2016/03/21 20:44:36.000.152,=D:\Development\GitHub\Prototipagem\caixaTexto.pas</Transaction>
+    <Transaction>2016/03/21 20:44:36.000.165,=fmx.dcp</Transaction>
+    <Transaction>2016/03/21 21:17:53.102,=D:\Development\GitHub\Prototipagem\rotulo.pas</Transaction>
+    <Transaction>2016/03/21 21:19:23.133,=D:\Development\GitHub\Prototipagem\botao.pas</Transaction>
+    <Transaction>2016/03/21 21:22:30.032,=D:\Development\GitHub\Prototipagem\Unit1.pas</Transaction>
+    <Transaction>2016/03/21 21:23:10.678,D:\Development\GitHub\Prototipagem\propriedades.pas=D:\Development\GitHub\Prototipagem\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
