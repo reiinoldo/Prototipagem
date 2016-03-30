@@ -132,10 +132,17 @@
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="fmx.dcp"/>
-        <DCCReference Include="caixaTexto.pas"/>
-        <DCCReference Include="rotulo.pas"/>
-        <DCCReference Include="botao.pas"/>
-        <DCCReference Include="propriedades.pas"/>
+        <DCCReference Include="designide.dcp"/>
+        <DCCReference Include="uBotao.pas"/>
+        <DCCReference Include="uCaixaTexto.pas"/>
+        <DCCReference Include="uRotulo.pas"/>
+        <DCCReference Include="Uteis\uDocumentacao.pas"/>
+        <DCCReference Include="Uteis\uPropriedades.pas"/>
+        <DCCReference Include="uCaixaSelecao.pas"/>
+        <DCCReference Include="Uteis\uParametro.pas">
+            <Form>frmParametro</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
