@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2016/03/21 20:44:11.000.268,=rtl.dcp</Transaction>
-    <Transaction>2016/03/21 20:44:36.000.165,=fmx.dcp</Transaction>
     <Transaction>2016/03/21 20:44:36.000.152,=D:\Development\GitHub\Prototipagem\caixaTexto.pas</Transaction>
+    <Transaction>2016/03/21 20:44:36.000.165,=fmx.dcp</Transaction>
     <Transaction>2016/03/21 21:17:53.000.102,=D:\Development\GitHub\Prototipagem\rotulo.pas</Transaction>
     <Transaction>2016/03/21 21:19:23.000.133,=D:\Development\GitHub\Prototipagem\botao.pas</Transaction>
     <Transaction>2016/03/21 21:22:30.000.032,=D:\Development\GitHub\Prototipagem\Unit1.pas</Transaction>
@@ -16,8 +16,8 @@
     <Transaction>2016/03/28 22:01:48.000.643,D:\Development\GitHub\Prototipagem\ucaixaTexto.pas=D:\Development\GitHub\Prototipagem\caixaTexto.pas</Transaction>
     <Transaction>2016/03/28 22:05:29.000.124,D:\Development\GitHub\Prototipagem\ucaixaTexto.pas=</Transaction>
     <Transaction>2016/03/28 22:05:47.000.870,=D:\Development\GitHub\Prototipagem\uBotao.pas</Transaction>
-    <Transaction>2016/03/28 22:05:50.000.463,=D:\Development\GitHub\Prototipagem\uCaixaTexto.pas</Transaction>
     <Transaction>2016/03/28 22:05:50.000.487,=D:\Development\GitHub\Prototipagem\uRotulo.pas</Transaction>
+    <Transaction>2016/03/28 22:05:50.000.463,=D:\Development\GitHub\Prototipagem\uCaixaTexto.pas</Transaction>
     <Transaction>2016/03/28 22:06:04.000.475,=D:\Development\GitHub\Prototipagem\Uteis\uDocumentacao.pas</Transaction>
     <Transaction>2016/03/28 22:06:04.000.500,=D:\Development\GitHub\Prototipagem\Uteis\uPropriedades.pas</Transaction>
     <Transaction>2016/03/29 19:58:45.000.078,=D:\Development\GitHub\Prototipagem\uCaixaSelecao.pas</Transaction>
@@ -30,7 +30,12 @@
     <Transaction>2016/03/30 19:00:41.000.410,=D:\Development\GitHub\Prototipagem\Unit2.pas</Transaction>
     <Transaction>2016/04/01 21:07:02.000.664,D:\Development\GitHub\Prototipagem\Uteis\uParametro.pas=</Transaction>
     <Transaction>2016/04/01 21:12:21.000.034,=D:\Development\GitHub\Prototipagem\Uteis\uParametro.pas</Transaction>
-    <Transaction>2016/04/03 18:02:00.310,=D:\Development\GitHub\Prototipagem\Unit2.pas</Transaction>
-    <Transaction>2016/04/03 18:03:21.753,D:\Development\GitHub\Prototipagem\Uteis\uEditorParametros.pas=D:\Development\GitHub\Prototipagem\Unit2.pas</Transaction>
+    <Transaction>2016/04/03 18:02:00.000.310,=D:\Development\GitHub\Prototipagem\Unit2.pas</Transaction>
+    <Transaction>2016/04/03 18:03:21.000.753,D:\Development\GitHub\Prototipagem\Uteis\uEditorParametros.pas=D:\Development\GitHub\Prototipagem\Unit2.pas</Transaction>
+    <Transaction>2016/04/04 20:22:15.000.746,=D:\Development\GitHub\Prototipagem\uAreaTexto.pas</Transaction>
+    <Transaction>2016/04/04 20:25:54.000.942,=D:\Development\GitHub\Prototipagem\uImagem.pas</Transaction>
+    <Transaction>2016/04/04 20:29:26.000.211,=D:\Development\GitHub\Prototipagem\uCaixaCombinacao.pas</Transaction>
+    <Transaction>2016/04/04 20:31:08.000.638,=D:\Development\GitHub\Prototipagem\uBotaoSelecao.pas</Transaction>
+    <Transaction>2016/04/04 20:31:58.000.181,=D:\Development\GitHub\Prototipagem\uGrade.pas</Transaction>
   </Transactions>
 </BorlandProject>

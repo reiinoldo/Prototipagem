@@ -1,10 +1,10 @@
-unit uCaixaTexto;
+unit uImagem;
 
 interface
 
 uses
-  System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
-  FMX.Controls.Presentation, FMX.Edit, uDocumentacao;
+  System.SysUtils, System.Classes, FMX.Types, FMX.Controls, FMX.Objects,
+  uDocumentacao;
 
 type
 
@@ -13,8 +13,9 @@ type
     property Tipo;
   end;
 
-  TCaixaTexto = class(TCustomEdit)
+  TImagem = class(TImage)
   private
+    { Private declarations }
     fDoc : TDocOwner;
   protected
     { Protected declarations }
@@ -22,11 +23,9 @@ type
     { Public declarations }
     constructor Create (AOwner: TComponent); override;
     destructor Destroy; override;
-
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
-    property Position;
   end;
 
 procedure Register;
@@ -35,18 +34,18 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('Prototipagem', [TCaixaTexto]);
+  RegisterComponents('Prototipagem', [TImagem]);
 end;
 
-{ TCaixaTexto }
+{ TImagem }
 
-constructor TCaixaTexto.create(AOwner: TComponent);
+constructor TImagem.Create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
 end;
 
-destructor TCaixaTexto.Destroy;
+destructor TImagem.Destroy;
 begin
   FreeAndNil(fDoc);
   inherited;

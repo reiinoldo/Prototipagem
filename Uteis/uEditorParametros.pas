@@ -5,7 +5,7 @@ interface
 uses
   System.UITypes, System.Classes, System.SysUtils,
   DesignEditors, DesignIntf,
-  uParametro;
+  uParametro, uBotao;
 
 type
 
@@ -15,7 +15,14 @@ type
     procedure Edit; override;
   end;
 
+procedure Register;
+
 implementation
+
+procedure Register;
+begin
+  RegisterPropertyEditor(TypeInfo(string), TParametro, 'ListaDeParametros', TParametrosEditor);
+end;
 
 { TParametrosEditor }
 

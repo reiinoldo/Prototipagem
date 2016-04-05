@@ -5,8 +5,7 @@ interface
 uses
   System.SysUtils, System.Classes,
   FMX.Types, FMX.Controls, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Dialogs,
-  DesignIntf,
-  uDocumentacao, uPropriedades, uEditorParametros;
+  uDocumentacao, uPropriedades;
 
 type
 
@@ -66,8 +65,6 @@ implementation
 procedure Register;
 begin
   RegisterComponents('Prototipagem', [TBotao]);
-  RegisterPropertyEditor(TypeInfo(string),TParametro, 'ListaDeParametros', TParametrosEditor);
-
 end;
 
 { TBotao }

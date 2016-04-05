@@ -1,13 +1,13 @@
-unit uRotulo;
+unit uGrade;
 
 interface
 
 uses
-  System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
-  FMX.Controls.Presentation, FMX.StdCtrls, uDocumentacao;
+  System.SysUtils, System.Classes, FMX.Types, FMX.Controls, FMX.Layouts,
+  FMX.Grid;
 
 type
-  TRotulo = class(TLabel)
+  TGrade = class(TCustomGrid)
   private
     { Private declarations }
   protected
@@ -24,8 +24,7 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('Prototipagem', [TRotulo]);
+  RegisterComponents('Prototipagem', [TGrade]);
 end;
-
 
 end.

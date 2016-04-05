@@ -1,10 +1,11 @@
-unit uCaixaTexto;
+unit uAreaTexto;
 
 interface
 
 uses
   System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
-  FMX.Controls.Presentation, FMX.Edit, uDocumentacao;
+  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo,
+  uDocumentacao;
 
 type
 
@@ -13,8 +14,9 @@ type
     property Tipo;
   end;
 
-  TCaixaTexto = class(TCustomEdit)
+  TAreaTexto = class(TCustomMemo)
   private
+    { Private declarations }
     fDoc : TDocOwner;
   protected
     { Protected declarations }
@@ -22,11 +24,12 @@ type
     { Public declarations }
     constructor Create (AOwner: TComponent); override;
     destructor Destroy; override;
-
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
     property Position;
+    property Width;
+    property Height;
   end;
 
 procedure Register;
@@ -35,18 +38,18 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('Prototipagem', [TCaixaTexto]);
+  RegisterComponents('Prototipagem', [TAreaTexto]);
 end;
 
-{ TCaixaTexto }
+{ TAreaTexto }
 
-constructor TCaixaTexto.create(AOwner: TComponent);
+constructor TAreaTexto.Create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
 end;
 
-destructor TCaixaTexto.Destroy;
+destructor TAreaTexto.Destroy;
 begin
   FreeAndNil(fDoc);
   inherited;

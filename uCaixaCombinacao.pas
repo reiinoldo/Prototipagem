@@ -1,22 +1,22 @@
-unit uCaixaSelecao;
+unit uCaixaCombinacao;
 
 interface
 
 uses
-  System.SysUtils, System.Classes, FMX.Types, FMX.Controls, FMX.ListBox,
+  System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
+  FMX.Controls.Presentation, FMX.StdCtrls,
   uDocumentacao;
 
 type
-
   TDocOwner = class(TDoc)
   published
     property Tipo;
   end;
 
-  TCaixaSelecao = class(TCustomComboBox)
+  TCaixaCombinacao = class(TCheckBox)
   private
     { Private declarations }
-    fDoc: TDoc;
+    fDoc: TDocOwner;
   protected
     { Protected declarations }
   public
@@ -25,9 +25,7 @@ type
     destructor Destroy; override;
   published
     { Published declarations }
-    property Documentacao : TDoc read fDoc write fDoc ;
-    property Position;
-    property Items;
+    property Documentacao : TDocOwner read fDoc write fDoc ;
   end;
 
 procedure Register;
@@ -36,18 +34,18 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('Prototipagem', [TCaixaSelecao]);
+  RegisterComponents('Prototipagem', [TCaixaCombinacao]);
 end;
 
-{ TCaixaSelecao }
+{ TCaixaCombinacao }
 
-constructor TCaixaSelecao.create(AOwner: TComponent);
+constructor TCaixaCombinacao.create(AOwner: TComponent);
 begin
   inherited;
-  fDoc := TDoc.Create(AOwner);
+  fDoc := TDocOwner.Create(AOwner);
 end;
 
-destructor TCaixaSelecao.Destroy;
+destructor TCaixaCombinacao.Destroy;
 begin
   FreeAndNil(fDoc);
   inherited;

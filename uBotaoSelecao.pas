@@ -1,20 +1,21 @@
-unit uCaixaTexto;
+unit uBotaoSelecao;
 
 interface
 
 uses
   System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
-  FMX.Controls.Presentation, FMX.Edit, uDocumentacao;
+  FMX.Controls.Presentation, FMX.StdCtrls,
+  uDocumentacao;
 
 type
-
   TDocOwner = class(TDoc)
   published
     property Tipo;
   end;
 
-  TCaixaTexto = class(TCustomEdit)
+  TBotaoSelecao = class(TRadioButton)
   private
+    { Private declarations }
     fDoc : TDocOwner;
   protected
     { Protected declarations }
@@ -22,11 +23,9 @@ type
     { Public declarations }
     constructor Create (AOwner: TComponent); override;
     destructor Destroy; override;
-
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
-    property Position;
   end;
 
 procedure Register;
@@ -35,18 +34,18 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('Prototipagem', [TCaixaTexto]);
+  RegisterComponents('Prototipagem', [TBotaoSelecao]);
 end;
 
-{ TCaixaTexto }
+{ TBotaoSelecao }
 
-constructor TCaixaTexto.create(AOwner: TComponent);
+constructor TBotaoSelecao.Create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
 end;
 
-destructor TCaixaTexto.Destroy;
+destructor TBotaoSelecao.Destroy;
 begin
   FreeAndNil(fDoc);
   inherited;
