@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Teste</name>
+		<Placemark>
+			<name>Cidade tal</name>
+			<styleUrl>#poly-3F5BA9-1-105-nodesc</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-49.5043945,-26.2540097,0.0 -49.5703125,-26.441065600000005,0.0 -49.614257800000004,-26.6474587,0.0 -49.7241211,-26.6867295,0.0 -49.6362305,-26.735799,0.0 -49.49340819999999,-26.7456104,0.0 -49.3395996,-26.8142662,0.0 -49.2626953,-26.8044608,0.0 -49.1638184,-26.725986799999998,0.0 -49.1308594,-26.6081744,0.0 -49.0979004,-26.500072900000003,0.0 -49.2407227,-26.4017105,0.0 -49.3505859,-26.342652800000003,0.0 -49.42749020000001,-26.2638623,0.0 -49.5043945,-26.2540097,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Style id='poly-3F5BA9-1-105-nodesc-normal'>
+			<LineStyle>
+				<color>ffA95B3F</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>69A95B3F</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-3F5BA9-1-105-nodesc-highlight'>
+			<LineStyle>
+				<color>ffA95B3F</color>
+				<width>2.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>69A95B3F</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-3F5BA9-1-105-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-3F5BA9-1-105-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-3F5BA9-1-105-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
