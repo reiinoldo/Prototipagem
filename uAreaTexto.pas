@@ -9,7 +9,7 @@ uses
 
 type
 
-  TDocOwner = class(TDoc)
+  TDocOwner = class(TDocumentacao)
   published
     property Tipo;
   end;

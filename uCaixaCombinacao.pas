@@ -8,7 +8,7 @@ uses
   uDocumentacao;
 
 type
-  TDocOwner = class(TDoc)
+  TDocOwner = class(TDocumentacao)
   published
     property Tipo;
   end;
@@ -21,7 +21,7 @@ type
     { Protected declarations }
   public
     { Public declarations }
-    constructor create (AOwner: TComponent); override;
+    constructor Create (AOwner: TComponent); override;
     destructor Destroy; override;
   published
     { Published declarations }

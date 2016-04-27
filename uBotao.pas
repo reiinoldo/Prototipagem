@@ -22,7 +22,7 @@ type
     property ListaDeParametros: String read fListaDeParametros write fListaDeParametros;
   end;
 
-  TDocOwner = class(TDoc)
+  TDocOwner = class(TDocumentacao)
   private
     { Private declarations }
     fParametros: TParametro;
@@ -49,7 +49,7 @@ type
     { Protected declarations }
   public
     { Public declarations }
-   constructor create (AOwner: TComponent); override;
+   constructor Create (AOwner: TComponent); override;
    destructor Destroy; override;
   published
     { Published declarations }

@@ -8,7 +8,7 @@ uses
 
 type
 
-  TDocOwner = class(TDoc)
+  TDocOwner = class(TDocumentacao)
   published
     property Tipo;
   end;
@@ -16,16 +16,16 @@ type
   TCaixaSelecao = class(TCustomComboBox)
   private
     { Private declarations }
-    fDoc: TDoc;
+    fDoc: TDocOwner;
   protected
     { Protected declarations }
   public
     { Public declarations }
-    constructor create (AOwner: TComponent); override;
+    constructor Create (AOwner: TComponent); override;
     destructor Destroy; override;
   published
     { Published declarations }
-    property Documentacao : TDoc read fDoc write fDoc ;
+    property Documentacao : TDocOwner read fDoc write fDoc ;
     property Position;
     property Items;
   end;
@@ -44,7 +44,7 @@ end;
 constructor TCaixaSelecao.create(AOwner: TComponent);
 begin
   inherited;
-  fDoc := TDoc.Create(AOwner);
+  fDoc := TDocOwner.Create(AOwner);
 end;
 
 destructor TCaixaSelecao.Destroy;
