@@ -14,7 +14,7 @@ type
     property Tipo;
   end;
 
-  TAreaTexto = class(TCustomMemo)
+  TAreaTexto = class(TMemo)
   private
     { Private declarations }
     fDoc : TDocOwner;
@@ -27,9 +27,6 @@ type
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
-    property Position;
-    property Width;
-    property Height;
   end;
 
 procedure Register;

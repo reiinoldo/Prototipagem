@@ -13,7 +13,7 @@ type
     property Tipo;
   end;
 
-  TCaixaTexto = class(TCustomEdit)
+  TCaixaTexto = class(TEdit)
   private
     fDoc : TDocOwner;
   protected
@@ -26,7 +26,6 @@ type
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
-    property Position;
   end;
 
 procedure Register;

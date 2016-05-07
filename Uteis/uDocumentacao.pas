@@ -13,6 +13,7 @@ type
     fVisibilidade: TVisibilidade;
     fTipo: String;
     fClasse: Boolean;
+    fAtributo: Boolean;
     function TipoIsStored:Boolean;
   protected
     { Protected declarations }
@@ -21,6 +22,7 @@ type
     constructor create(AOwner: TPersistent);
     property Tipo: String read fTipo write fTipo stored TipoIsStored;
     property Classe: Boolean read fClasse write fClasse;
+    property Atributo: Boolean read fAtributo write fAtributo;
   published
     { Published declarations }
     property Visibilidade: TVisibilidade read fVisibilidade write fVisibilidade;

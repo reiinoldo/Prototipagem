@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Classes,
   FMX.Types, FMX.Controls, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Dialogs,
-  uDocumentacao, uPropriedades;
+  uDocumentacao, uPropriedades, uListaDeAtores;
 
 type
 
@@ -27,8 +27,6 @@ type
     { Private declarations }
     fParametros: TParametro;
     fRetorno: String;
-    fAtor: TStrings;
-    procedure SetAtor(const Value: TStrings);
   protected
     { Protected declarations }
   public
@@ -38,13 +36,14 @@ type
     { Published declarations }
     property Retorno: String read fRetorno write fRetorno;
     property Parametros: TParametro read fParametros write fParametros;
-    property Ator: TStrings read fAtor write SetAtor;
+
   end;
 
-  TBotao = class(TCustomButton)
+  TBotao = class(TButton)
   private
     { Private declarations }
     fDoc : TDocOwner;
+    fAtor: TListaDeItens;
   protected
     { Protected declarations }
   public
@@ -53,9 +52,8 @@ type
    destructor Destroy; override;
   published
     { Published declarations }
-    property Position;
-    property Text;
     property Documentacao : TDocOwner read fDoc write fDoc ;
+    property DocumentacaoAtor: TListaDeItens read fAtor write fAtor;
   end;
 
 procedure Register;
@@ -73,6 +71,7 @@ constructor TBotao.create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
+  fAtor := TListaDeItens.Create(Self);
 end;
 
 destructor TBotao.Destroy;
@@ -87,13 +86,6 @@ end;
 constructor TDocOwner.create(AOwner: TComponent);
 begin
   fParametros := TParametro.Create;
-  fAtor := TStringList.Create;
-end;
-
-
-procedure TDocOwner.SetAtor(const Value: TStrings);
-begin
-  fAtor.Assign(Value);
 end;
 
 end.

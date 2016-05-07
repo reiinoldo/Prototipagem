@@ -3,7 +3,7 @@ unit uCaixaSelecao;
 interface
 
 uses
-  System.SysUtils, System.Classes, FMX.Types, FMX.Controls, FMX.ListBox,
+  System.SysUtils, System.Classes, FMX.Types, FMX.Controls, FMX.StdCtrls,
   uDocumentacao;
 
 type
@@ -13,7 +13,7 @@ type
     property Tipo;
   end;
 
-  TCaixaSelecao = class(TCustomComboBox)
+  TCaixaSelecao = class(TCheckBox)
   private
     { Private declarations }
     fDoc: TDocOwner;
@@ -26,8 +26,6 @@ type
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
-    property Position;
-    property Items;
   end;
 
 procedure Register;

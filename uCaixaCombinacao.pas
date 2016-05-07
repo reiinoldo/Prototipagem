@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
-  FMX.Controls.Presentation, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox,
   uDocumentacao;
 
 type
@@ -13,7 +13,7 @@ type
     property Tipo;
   end;
 
-  TCaixaCombinacao = class(TCheckBox)
+  TCaixaCombinacao = class(TComboBox)
   private
     { Private declarations }
     fDoc: TDocOwner;

@@ -3,8 +3,9 @@ unit uGrade;
 interface
 
 uses
-  System.SysUtils, System.Classes, FMX.Types, FMX.Controls, FMX.Layouts,
-  FMX.Grid, uDocumentacao, System.Rtti;
+  System.SysUtils, System.Classes,System.Rtti, System.UITypes,
+  FMX.Types, FMX.Controls, FMX.Layouts, FMX.Graphics, FMX.Grid,
+  uDocumentacao, uEstereotipo, uListaDeEstereotipos, FMX.dialogs;
 
 type
 
@@ -24,6 +25,7 @@ type
   private
     { Private declarations }
     fDoc : TDocOwner;
+    fEstereotipo: TListaDeItens;
   protected
     { Protected declarations }
   public
@@ -33,6 +35,7 @@ type
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
+    property DocumentacaoEstereotipo : TListaDeItens read fEstereotipo write fEstereotipo ;
   end;
 
 procedure Register;
@@ -50,6 +53,7 @@ constructor TGrade.Create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
+  fEstereotipo := TListaDeItens.Create(AOwner);
 end;
 
 destructor TGrade.Destroy;
@@ -58,4 +62,6 @@ begin
   inherited;
 end;
 
+
 end.
+
