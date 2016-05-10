@@ -4,7 +4,7 @@ interface
 
 uses
   System.UITypes, System.Classes, System.SysUtils,
-  DesignEditors, DesignIntf, uEstereotipo;
+  DesignEditors, DesignIntf, uEstereotipo, uPropriedades;
 
 type
 
@@ -32,17 +32,15 @@ begin
 end;
 
 procedure TEstereotipoEditor.GetValues(Proc: TGetStrProc);
+var
+  I: Integer;
 begin
   inherited;
-  Proc('auxiliary');
-  Proc('focus');
-  Proc('implementattion');
-  Proc('metaclass');
-  Proc('powertype');
-  Proc('process');
-  Proc('thread');
-  Proc('type');
-  Proc('utility');
+
+  Proc(CTipoOpcao);
+
+  for I := 0 to High(CTipoEstereotipoComponente) do
+    Proc(CTipoEstereotipoComponente[I]);
 
 end;
 

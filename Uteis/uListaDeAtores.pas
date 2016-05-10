@@ -10,8 +10,8 @@ type
 
   TItem = class(TCollectionItem)
   private
-    fAtor : TAtor;
     fDisplayName: String;
+    fAtor: TAtor;
   protected
     function GetDisplayName: string; override;
   public
@@ -20,7 +20,7 @@ type
     procedure Assign(Source: TPersistent); override;
     property DisplayName: String read fDisplayName write fDisplayName;
   published
-    property Ator : TAtor read fAtor write fAtor;
+    property Ator: TAtor read fAtor write fAtor;
   end;
 
   TListaDeItens = class(TCollection)

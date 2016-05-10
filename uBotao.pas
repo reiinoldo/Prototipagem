@@ -43,7 +43,7 @@ type
   private
     { Private declarations }
     fDoc : TDocOwner;
-    fAtor: TListaDeItens;
+    fDocAtor: TListaDeItens;
   protected
     { Protected declarations }
   public
@@ -53,7 +53,7 @@ type
   published
     { Published declarations }
     property Documentacao : TDocOwner read fDoc write fDoc ;
-    property DocumentacaoAtor: TListaDeItens read fAtor write fAtor;
+    property DocumentacaoAtor: TListaDeItens read fDocAtor write fDocAtor;
   end;
 
 procedure Register;
@@ -71,12 +71,13 @@ constructor TBotao.create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
-  fAtor := TListaDeItens.Create(Self);
+  fDocAtor := TListaDeItens.Create(Self);
 end;
 
 destructor TBotao.Destroy;
 begin
   FreeAndNil(fDoc);
+  FreeAndNil(fDocAtor);
   inherited;
 end;
 

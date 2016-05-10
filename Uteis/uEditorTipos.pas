@@ -34,12 +34,16 @@ begin
 end;
 
 procedure TTiposEditor.GetValues(Proc: TGetStrProc);
+var
+  I: Integer;
 begin
   inherited;
+
   Proc(CTipoOpcao);
-  Proc('String');
-  Proc('Integer');
-  Proc('Boolean');
+
+  for I := 0 to High(CTTipoComponente) do
+    Proc(CTTipoComponente[I]);
+
 end;
 
 end.
