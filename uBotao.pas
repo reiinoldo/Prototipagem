@@ -27,6 +27,7 @@ type
     { Private declarations }
     fParametros: TParametro;
     fRetorno: String;
+    function RetornoIsStored: Boolean;
   protected
     { Protected declarations }
   public
@@ -34,7 +35,7 @@ type
     constructor create (AOwner: TComponent);
   published
     { Published declarations }
-    property Retorno: String read fRetorno write fRetorno;
+    property Retorno: String read fRetorno write fRetorno stored RetornoIsStored;
     property Parametros: TParametro read fParametros write fParametros;
 
   end;
@@ -87,6 +88,11 @@ end;
 constructor TDocOwner.create(AOwner: TComponent);
 begin
   fParametros := TParametro.Create;
+end;
+
+function TDocOwner.RetornoIsStored: Boolean;
+begin
+  Result := fRetorno <> CTipoOpcao;
 end;
 
 end.
