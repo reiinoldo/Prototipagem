@@ -5,6 +5,7 @@ interface
 type
 
   TVisibilidade = (Público, Privado, Protegido, Pacote);
+  TTipoRelacionamento = (trClasse, trCasoDeUso);
 //  TModificabilidade = (ApenasAdicionar, Alteravel, Imutavel);
 //  TTipoEstereotipo = (Auxiliar, Foco, Implementação, MetaClasse, TipoDePoder, Processo, Thread, Tipo, Utilitário);
 //  TClasseOpcao = (Sim, Não, Visualização);
