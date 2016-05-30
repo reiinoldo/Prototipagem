@@ -12,6 +12,7 @@ type
   TDocOwner = class(TDocumentacao)
   published
     property Tipo;
+    property Atributo;
   end;
 
   TAreaTexto = class(TMemo)

@@ -44,6 +44,7 @@ constructor TRotulo.Create(AOwner: TComponent);
 begin
   inherited;
   fDoc := TDocOwner.Create(AOwner);
+  fDoc.Atributo := False; //Padrão falso
 end;
 
 destructor TRotulo.Destroy;

@@ -11,6 +11,7 @@ type
   TDocOwner = class(TDocumentacao)
   published
     property Tipo;
+    property Atributo;
   end;
 
   TImagem = class(TImage)

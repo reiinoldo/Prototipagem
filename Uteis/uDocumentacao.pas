@@ -37,6 +37,7 @@ constructor TDocumentacao.create(AOwner: TPersistent);
 begin
   Self.Visibilidade := Privado;
   Self.Tipo := CTipoOpcao;
+  Self.fAtributo := True;
 end;
 
 function TDocumentacao.TipoIsStored: Boolean;
