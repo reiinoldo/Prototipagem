@@ -17,7 +17,7 @@ const
   CTipoOpcao =  'Insira um novo tipo ou Selecione uma das opções abaixo';
   CTipoEstereotipoComponente: array [0..8] of String = ('Auxiliar', 'Foco', 'Implementacao', 'MetaClasse', 'TipoDePoder', 'Processo', 'Thread', 'Tipo', 'Utilitario');
   CTipoEstereotipoXMI: array [0..8] of String = ('auxiliary', 'focus', 'implementation', 'metaclass', 'powertype', 'process', 'thread', 'type', 'utility');
-  CTTipoComponente: array [0..5] of String = ('Inteiro', 'Real', 'Lógico', 'Texto', 'Data', 'Hora');
+  CTTipoComponente: array [0..5] of String = ('Inteiro', 'Real', 'Logico', 'Texto', 'Data', 'Hora');
 
 
   function visibilidadeComponenteParaXMI(pVisibilidade: String): String;
