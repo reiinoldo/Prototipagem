@@ -1,0 +1,59 @@
+package Prototipagem;
+
+{$R *.res}
+{$R *.dres}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Prototipagem para documentação'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  fmx,
+  designide;
+
+contains
+  uBotao in 'uBotao.pas',
+  uCaixaTexto in 'uCaixaTexto.pas',
+  uRotulo in 'uRotulo.pas',
+  uDocumentacao in 'Uteis\uDocumentacao.pas',
+  uPropriedades in 'Uteis\uPropriedades.pas',
+  uCaixaSelecao in 'uCaixaSelecao.pas',
+  uParametro in 'Uteis\uParametro.pas' {frmParametro},
+  uEditorParametros in 'Uteis\uEditorParametros.pas',
+  uAreaTexto in 'uAreaTexto.pas',
+  uImagem in 'uImagem.pas',
+  uCaixaCombinacao in 'uCaixaCombinacao.pas',
+  uBotaoSelecao in 'uBotaoSelecao.pas',
+  uGrade in 'uGrade.pas',
+  uEditorTipos in 'Uteis\uEditorTipos.pas',
+  uEstereotipo in 'uEstereotipo.pas',
+  uEditorEstereotipo in 'Uteis\uEditorEstereotipo.pas',
+  uListaDeAtores in 'Uteis\uListaDeAtores.pas',
+  uAtor in 'uAtor.pas',
+  uListaDeEstereotipos in 'Uteis\uListaDeEstereotipos.pas';
+end.
+
