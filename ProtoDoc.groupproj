@@ -9,6 +9,9 @@
         <Projects Include="..\Documentacao\Documentacao.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\Tutorial\Tutorial.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="..\Testes\Testes.dproj">
             <Dependencies/>
         </Projects>
@@ -38,6 +41,15 @@
     <Target Name="Documentacao:Make">
         <MSBuild Projects="..\Documentacao\Documentacao.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Tutorial">
+        <MSBuild Projects="..\Tutorial\Tutorial.dproj"/>
+    </Target>
+    <Target Name="Tutorial:Clean">
+        <MSBuild Projects="..\Tutorial\Tutorial.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Tutorial:Make">
+        <MSBuild Projects="..\Tutorial\Tutorial.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Testes">
         <MSBuild Projects="..\Testes\Testes.dproj"/>
     </Target>
@@ -48,13 +60,13 @@
         <MSBuild Projects="..\Testes\Testes.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="Prototipagem;Documentacao;Testes"/>
+        <CallTarget Targets="Prototipagem;Documentacao;Tutorial;Testes"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Prototipagem:Clean;Documentacao:Clean;Testes:Clean"/>
+        <CallTarget Targets="Prototipagem:Clean;Documentacao:Clean;Tutorial:Clean;Testes:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Prototipagem:Make;Documentacao:Make;Testes:Make"/>
+        <CallTarget Targets="Prototipagem:Make;Documentacao:Make;Tutorial:Make;Testes:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
